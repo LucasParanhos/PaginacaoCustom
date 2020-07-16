@@ -1,0 +1,89 @@
+﻿/*
+ * Paginação costumizada
+ *
+ * Dependencias: Jquery, java script de mesmo nome, font-awesome
+ *
+ * Ultima atualização
+ *
+ * Data: 27/08/2019
+ * Por: Lucas Paranhos
+ * Atualizações: Compatibilidade com clicar e arrastar
+ */
+
+$cor1: #4C2582; //cor dos itens
+$cor2: #f6f6f6; //cor do fundo da página
+$tamanhoLink: 10px; //tamanho do link
+
+.controlesPaginacaoCustom {
+    display: flex;
+    justify-content: center;
+
+
+    li.page-item {
+        list-style: none;
+        padding: 10px;
+        width: min-content;
+        width: fit-content;
+
+        .page-link {
+            cursor: pointer;
+            border: 1px solid $cor1;
+            background-color: transparent;
+            height: $tamanhoLink;
+            width: $tamanhoLink;
+            border-radius: 50%;
+            padding: 0px;
+
+            &.selected {
+                background-color: $cor1;
+                border: 1px solid $cor2;
+                box-shadow: 0 0 0px 1px $cor1;
+            }
+        }
+    }
+
+    .page-item.ant-prox {
+        padding: 3px;
+
+        .page-link {
+            border: none;
+            color: $cor1;
+            height: 29px;
+            width: 24px;
+            font-size: 19px;
+        }
+    }
+
+
+    .page-link:focus {
+        box-shadow: none;
+    }
+
+    .responsivePagination {
+        min-width: 120px;
+        overflow: auto;
+        display: flex;
+
+        li.page-item:first-child {
+            margin-left: auto;
+        }
+
+        li.page-item:last-child {
+            margin-right: auto;
+        }
+    }
+}
+
+.pagina-paginacao {
+    transition: opacity 350ms ease-in-out;
+    opacity: 1;
+
+    &.hide {
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+

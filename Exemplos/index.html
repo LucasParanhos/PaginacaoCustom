@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Plug-in de paginação</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../PaginacaoCustom.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1 class="text-center pt-4">Plug-in de paginação</h1>
+
+    <div class="paginacaoCustom col-12 text-center mt-5" id="paginacaoCustom" data-debug="true" data-referencia="paginacaoIndex" data-itens="3">
+        <div class="elementoPaginavel"><h3>Com esse plug-in você poderá</br> usar uma paginação diferenciada</h3></div>
+        <div class="elementoPaginavel"><h4>Como essa aqui</h4></div>
+        <div class="elementoPaginavel"><h4>Funciona mesmo!</h4></div>
+        <div class="elementoPaginavel"><h4>Você pode alterar essa página como você quiser para ver o plug-in em ação</h4></div>
+    </div>
+
+    <div class="controlesPaginacaoCustom col-12" data-referencia="paginacaoIndex" data-mostrar_unica="false" >
+
+    </div>
+
+    <div class="row">
+    <button class="col-2 offset-5" onclick="destruirPaginacao($('#paginacaoCustom'))">Destruir</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../PaginacaoCustom.js"></script>
+</body>
+</html>
